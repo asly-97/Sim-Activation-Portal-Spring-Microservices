@@ -8,13 +8,13 @@ import jakarta.persistence.Table;
 @Table(name = "sim")
 public class SimDetails {
     @Id
-    private int serviceNumber;
+    private long serviceNumber;
 
-    private int simNumber;
+    private long simNumber;
 
     private boolean activated;
 
-    public SimDetails(int phoneNumber, int simNumber, boolean activated) {
+    public SimDetails(long phoneNumber, long simNumber, boolean activated) {
         this.serviceNumber = phoneNumber;
         this.simNumber = simNumber;
         this.activated = activated;
@@ -24,19 +24,19 @@ public class SimDetails {
 
     }
 
-    public int getServiceNumber() {
+    public long getServiceNumber() {
         return serviceNumber;
     }
 
-    public void setServiceNumber(int phoneNumber) {
+    public void setServiceNumber(long phoneNumber) {
         this.serviceNumber = phoneNumber;
     }
 
-    public int getSimNumber() {
+    public long getSimNumber() {
         return simNumber;
     }
 
-    public void setSimNumber(int simNumber) {
+    public void setSimNumber(long simNumber) {
         this.simNumber = simNumber;
     }
 

@@ -1,35 +1,39 @@
 package com.simactivation.portal.SimService.dto;
 
+import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
+
 
 public class SimDTO {
 
     @NotNull
-    @Pattern(regexp = "\\d{10}",message = "Service number should be 10 digit numeric value\n")
-    private int serviceNumber;
+    @Digits(integer = 10, fraction = 0, message = "{invalid_service_number}")
+    //@Pattern(regexp = "\\d{10}", message = "{invalid_service_number}")
+    private long serviceNumber;
 
     @NotNull
-    @Pattern(regexp = "\\d{13}",message = "SIM number should be 13 digit numeric value")
-    private int simNumber;
+    @Digits(integer = 13, fraction = 0, message = "{invalid_sim_number}")
+    //@Pattern(regexp = "\\d{13}", message = "{invalid_sim_number}")
+    private long simNumber;
 
-    public SimDTO(int serviceNumber, int simNumber) {
+    public SimDTO(long serviceNumber, long simNumber) {
         this.serviceNumber = serviceNumber;
         this.simNumber = simNumber;
     }
-    public int getServiceNumber() {
+    public long getServiceNumber() {
         return serviceNumber;
     }
 
-    public void setServiceNumber(int serviceNumber) {
+    public void setServiceNumber(long serviceNumber) {
         this.serviceNumber = serviceNumber;
     }
 
-    public int getSimNumber() {
+    public long getSimNumber() {
         return simNumber;
     }
 
-    public void setSimNumber(int simNumber) {
+    public void setSimNumber( long simNumber) {
         this.simNumber = simNumber;
     }
 }
