@@ -1,4 +1,4 @@
-package com.simactivation.portal.CustomerService.service;
+package com.simactivation.portal.ActivationSummaryService.service;
 
 import com.simactivation.portal.CustomerService.dto.CustomerDTO;
 import com.simactivation.portal.CustomerService.entity.Customer;
@@ -48,11 +48,5 @@ public class CustomerService {
         customer.setAddress(address);
         repository.save(customer);
         return "Address updated successfully.";
-    }
-
-    public Customer getDetails(long serviceNumber) throws UnregisteredPhoneNumberException {
-        Customer customer = repository.findByPhoneNumber(serviceNumber)
-                .orElseThrow(UnregisteredPhoneNumberException::new);
-        return customer;
     }
 }

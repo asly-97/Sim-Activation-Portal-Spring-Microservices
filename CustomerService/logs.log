@@ -26,3 +26,7 @@
 2024-12-30 18:01:16 INFO  [RMI TCP Connection(5)-192.168.1.75] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
 2024-12-30 18:01:16 INFO  [RMI TCP Connection(5)-192.168.1.75] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
 2024-12-30 18:01:16 INFO  [RMI TCP Connection(5)-192.168.1.75] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-12-30 20:22:12 INFO  [SpringApplicationShutdownHook] o.s.c.c.s.ConsulServiceRegistry - Deregistering service with consul: CustomerService-7200
+2024-12-30 20:22:12 INFO  [SpringApplicationShutdownHook] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-12-30 20:22:12 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2024-12-30 20:22:12 INFO  [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

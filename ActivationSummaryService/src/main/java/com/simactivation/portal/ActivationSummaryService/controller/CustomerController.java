@@ -1,10 +1,8 @@
-package com.simactivation.portal.CustomerService.controller;
+package com.simactivation.portal.ActivationSummaryService.controller;
 
 
 import com.simactivation.portal.CustomerService.dto.CustomerDTO;
-import com.simactivation.portal.CustomerService.entity.Customer;
 import com.simactivation.portal.CustomerService.exception.SAPException;
-import com.simactivation.portal.CustomerService.exception.UnregisteredPhoneNumberException;
 import com.simactivation.portal.CustomerService.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -32,11 +30,6 @@ public class CustomerController {
     @PostMapping("/{serviceNumber}/address")
     public ResponseEntity<String> addAddress(@PathVariable Long serviceNumber, @RequestBody String address) throws SAPException {
         return ResponseEntity.accepted().body(service.addAddress(serviceNumber,address));
-    }
-
-    @GetMapping("/details/{serviceNumber}")
-    public ResponseEntity<Customer> getDetails(@PathVariable long serviceNumber) throws UnregisteredPhoneNumberException {
-        return ResponseEntity.ok(service.getDetails(serviceNumber));
     }
 
 
