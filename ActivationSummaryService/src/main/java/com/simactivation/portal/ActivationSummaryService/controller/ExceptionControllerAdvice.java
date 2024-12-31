@@ -1,7 +1,7 @@
 package com.simactivation.portal.ActivationSummaryService.controller;
 
-import com.simactivation.portal.CustomerService.exception.SAPException;
-import com.simactivation.portal.CustomerService.utility.ErrorInfo;
+import com.simactivation.portal.ActivationSummaryService.exception.SAPException;
+import com.simactivation.portal.ActivationSummaryService.utility.ErrorInfo;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.ObjectError;

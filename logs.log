@@ -1,0 +1,35 @@
+2024-12-31 12:51:44 INFO  [main] c.s.p.C.CustomerServiceApplication - Starting CustomerServiceApplication using Java 23.0.1 with PID 2627 (/Users/pp/InfosysWorkplace/Projects/SpringMicroservices/SIM-Activation-Project/SIM-Activation-App/CustomerService/target/classes started by pp in /Users/pp/InfosysWorkplace/Projects/SpringMicroservices/SIM-Activation-Project/SIM-Activation-App)
+2024-12-31 12:51:44 INFO  [main] c.s.p.C.CustomerServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-31 12:51:45 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-12-31 12:51:45 INFO  [main] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62 ms. Found 1 JPA repository interface.
+2024-12-31 12:51:45 INFO  [main] o.s.cloud.context.scope.GenericScope - BeanFactory id=de6f1319-545d-3d2b-88f7-ffbaac80f273
+2024-12-31 12:51:45 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 7200 (http)
+2024-12-31 12:51:45 INFO  [main] o.a.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-31 12:51:45 INFO  [main] o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.34]
+2024-12-31 12:51:45 INFO  [main] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-31 12:51:45 INFO  [main] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 913 ms
+2024-12-31 12:51:45 INFO  [main] o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-12-31 12:51:45 INFO  [main] org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-12-31 12:51:45 INFO  [main] o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-12-31 12:51:45 INFO  [main] o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-12-31 12:51:45 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2024-12-31 12:51:46 INFO  [main] com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6cb417fc
+2024-12-31 12:51:46 INFO  [main] com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2024-12-31 12:51:46 INFO  [main] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-12-31 12:51:46 INFO  [main] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-12-31 12:51:46 WARN  [main] o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-12-31 12:51:47 WARN  [main] o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger - Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-12-31 12:51:47 INFO  [main] o.s.b.a.e.web.EndpointLinksResolver - Exposing 1 endpoint beneath base path '/actuator'
+2024-12-31 12:51:47 INFO  [main] o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 7200 (http) with context path '/'
+2024-12-31 12:51:47 INFO  [main] o.s.c.c.s.ConsulServiceRegistry - Registering service with consul: NewService{id='CustomerService-7200', name='CustomerService', tags=[], address='localhost', meta={secure=false}, port=7200, enableTagOverride=null, check=Check{script='null', dockerContainerID='null', shell='null', interval='10s', ttl='null', http='http://localhost:7200/actuator/health', method='null', header={}, tcp='null', timeout='null', deregisterCriticalServiceAfter='null', tlsSkipVerify=null, status='null', grpc='null', grpcUseTLS=null}, checks=null}
+2024-12-31 12:51:47 INFO  [main] c.s.p.C.CustomerServiceApplication - Started CustomerServiceApplication in 3.182 seconds (process running for 3.536)
+2024-12-31 12:51:47 INFO  [RMI TCP Connection(3)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-31 12:51:47 INFO  [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-31 12:51:47 INFO  [RMI TCP Connection(3)-127.0.0.1] o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-12-31 12:53:59 WARN  [http-nio-7200-exec-5] o.s.w.s.m.s.DefaultHandlerExceptionResolver - Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' is not supported]
+2024-12-31 12:54:15 ERROR [http-nio-7200-exec-8] c.s.p.C.utility.LoggingAspect - This phone number is not registered to any customer.
+2024-12-31 12:54:43 ERROR [http-nio-7200-exec-2] c.s.p.C.utility.LoggingAspect - This phone number is not registered to any customer.
+2024-12-31 12:56:45 ERROR [http-nio-7200-exec-8] c.s.p.C.utility.LoggingAspect - No request placed for you.
+2024-12-31 12:56:55 ERROR [http-nio-7200-exec-10] c.s.p.C.utility.LoggingAspect - No request placed for you.
+2024-12-31 12:57:05 ERROR [http-nio-7200-exec-2] c.s.p.C.utility.LoggingAspect - No request placed for you.
+2024-12-31 12:57:58 ERROR [http-nio-7200-exec-9] c.s.p.C.utility.LoggingAspect - No request placed for you.
