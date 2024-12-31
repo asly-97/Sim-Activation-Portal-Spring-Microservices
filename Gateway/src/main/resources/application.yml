@@ -1,0 +1,24 @@
+
+spring:
+  application:
+    name: SAPGateway
+  cloud:
+    consul:
+      discovery:
+        hostname: localhost
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: SimService
+          uri: lb://SimService
+          predicates:
+            - Path=/sim/**
+        - id: CustomerService
+          uri: lb://CustomerService
+          predicates:
+            - Path=/customer/**
+
+server:
+  port: 8000

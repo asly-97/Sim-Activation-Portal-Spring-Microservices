@@ -1,4 +1,4 @@
-package com.simactivation.portal.SimService.utility;
+package com.simactivation.portal.CustomerService.utility;
 
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
@@ -14,6 +14,6 @@ public class LoggingAspect {
 
     @AfterThrowing(pointcut = "execution(* com.simactivation.portal.*.service.*Service.*(..))",throwing = "e")
     public void logServiceException(Exception e){
-        logger.log(Level.SEVERE,e.getMessage(),e);
+        logger.log(Level.SEVERE,e.getMessage());
     }
 }
